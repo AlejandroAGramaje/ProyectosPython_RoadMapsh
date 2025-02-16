@@ -1,0 +1,17 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 style="font-weight: bold;">Unit Converter</h1>
+    <nav>
+        <a href="/length">Length</a>
+        <a href="/weight">Weight</a>
+        <a href="/temperature">Temperature</a>
+    </nav>
+</body>
+</html>

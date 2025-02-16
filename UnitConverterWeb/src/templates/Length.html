@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Length Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Unit Converter</h1>
+<nav>
+    <a href="/length" style="color:blue;">Length</a>
+    <a href="/weight">Weight</a>
+    <a href="/temperature">Temperature</a>
+</nav>
+
+<div class="box">
+    <form method="POST">
+        <label>Enter the length to convert:</label>
+        <input type="number" name="value" step="any" placeholder="e.g., 100" required>
+
+        <label>Unit to Convert from:</label>
+        <input type="text" name="unit_from" placeholder="e.g., meter" required>
+
+        <label>Unit to Convert to:</label>
+        <input type="text" name="unit_to" placeholder="e.g., kilometer" required>
+
+        <button type="submit">Convert</button>
+    </form>
+</div>
+
+</body>
+</html>
+

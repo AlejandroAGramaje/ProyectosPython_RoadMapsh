@@ -1,0 +1,28 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ category }} Conversion Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Unit Converter</h1>
+<nav>
+    <a href="/length">Length</a>
+    <a href="/weight">Weight</a>
+    <a href="/temperature">Temperature</a>
+</nav>
+
+<div class="box">
+    <h2>Result of your calculation</h2>
+    <div class="result">
+        {{ value }} {{ unit_from }} = <strong>{{ result }} {{ unit_to }}</strong>
+    </div>
+    <form action="/{{ category.lower() }}">
+        <button type="submit">Reset</button>
+    </form>
+</div>
+
+</body>
+</html>
